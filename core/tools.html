@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- Asset tools for this game (core/tools.js). Only the dev server serves it; a build leaves it out. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asset tools</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 16px;
+        display: grid;
+        gap: 12px;
+        background: #f4f5f7;
+        color: #1b2129;
+        font:
+          13px system-ui,
+          sans-serif;
+      }
+      #preview {
+        max-width: 100%;
+        image-rendering: pixelated;
+        background: repeating-conic-gradient(#dfe2e6 0% 25%, #ffffff 0% 50%) 0 0 / 16px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="status">Loading</div>
+    <canvas id="preview" width="1" height="1"></canvas>
+    <script type="module" src="/core/tools.js"></script>
+  </body>
+</html>

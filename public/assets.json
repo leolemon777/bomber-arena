@@ -1,0 +1,10 @@
+{
+  "assets": [
+    { "path": "assets/char_bomber_red.glb", "size": 1.15, "measure": "height", "forward": "+z", "role": "player", "collision": "character", "task": "51723d24-2c78-5c2e-b26d-b0dcb925a5b1", "status": "ready" },
+    { "path": "assets/prop_bomb_classic.glb", "size": 0.72, "measure": "height", "forward": "+z", "role": "prop", "collision": "none", "task": "172619c5-37a3-5dca-b4c8-c188dcafaa16", "status": "ready" },
+    { "path": "assets/env_block_crate.glb", "size": 0.96, "measure": "width", "forward": "+z", "role": "scenery", "collision": "static", "task": "ab29298b-00ed-56c7-a588-ba108722a3f4", "status": "ready" },
+    { "path": "assets/env_wall_bumper.glb", "size": 1.0, "measure": "width", "forward": "+z", "role": "scenery", "collision": "static", "task": "e1977470-6d9f-53af-801c-630258eb37d9", "status": "ready" },
+    { "path": "assets/item_powerup_sneaker.glb", "size": 0.78, "measure": "length", "forward": "+z", "role": "pickup", "collision": "none", "task": "c3971989-fbdc-5457-a5b1-0e2c9619159f", "status": "ready" },
+    { "path": "assets/item_powerup_potion.glb", "size": 0.75, "measure": "height", "forward": "+z", "role": "pickup", "collision": "none", "task": "0c32e8f3-2eb9-5c15-a903-a74fe06aeaa3", "status": "ready" }
+  ]
+}

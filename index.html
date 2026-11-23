@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- Set lang to the game's language and <title> to its name: the panel's tab shows it. -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>炸弹乱斗</title>
+    <!-- The runtime's rules: keep this block. #loading covers the page until the first frame is
+         drawn with the models the start waits for in place. What is inside it appears only after
+         0.3 s, so a quick load shows just its background. The runtime sets --progress on
+         #loading, from 0 to 1, as the models load. -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        background: #101318;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        touch-action: none;
+      }
+      /* The game's own screens and HUD. Clicks pass through to the game except on .hit elements. */
+      #ui {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        user-select: none;
+      }
+      #ui .hit {
+        pointer-events: auto;
+      }
+      #loading {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background: #101318;
+      }
+      #loading:not(.shown) > * {
+        visibility: hidden !important;
+      }
+    </style>
+    <!-- The loading screen's look: replace it, and what is inside #loading, with this game's own. -->
+    <style>
+      #loading {
+        display: grid;
+        place-items: center;
+        background: #86b4dc url(./art/key-art.jpg) center / cover no-repeat;
+        font-family: "Arial Rounded MT Bold", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+      #loading .card {
+        text-align: center;
+        padding: 22px 30px 20px;
+        border-radius: 26px;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 7px 0 rgba(0, 0, 0, 0.2);
+      }
+      #loading h1 {
+        margin: 0 0 14px;
+        font-size: 38px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        color: #e8322f;
+        text-shadow: 0 4px 0 #b51f1d;
+      }
+      #loading .bar {
+        width: 200px;
+        height: 14px;
+        border-radius: 7px;
+        box-shadow: 0 0 0 3px #e8322f;
+        background: repeating-linear-gradient(135deg, #e8322f 0 10px, #ff5a4f 10px 20px) left / calc(var(--progress, 0) * 100%) 100%
+          no-repeat #ffe3dd;
+      }
+      #loading p {
+        margin: 10px 0 0;
+        color: #5a5f6e;
+        font-size: 13px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui"></div>
+    <div id="loading"><div class="card"><h1>炸弹乱斗</h1><div class="bar"></div><p>正在装填炸弹…</p></div></div>
+    <!-- A three.js game (3D or 2.5D). A pure 2D game loads /core/phaser/runtime.js instead. -->
+    <script type="module" src="/core/three/runtime.js"></script>
+  </body>
+</html>

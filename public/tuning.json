@@ -1,0 +1,19 @@
+{
+  "params": [
+    { "id": "player.speed", "label": "玩家基础速度", "value": 3.4, "min": 1.5, "max": 7, "step": 0.1, "unit": "格/秒" },
+    { "id": "speed.bonus", "label": "每只跑鞋加速", "value": 0.55, "min": 0, "max": 1.5, "step": 0.05, "unit": "格/秒" },
+    { "id": "bot.speed", "label": "电脑基础速度", "value": 3.0, "min": 1, "max": 7, "step": 0.1, "unit": "格/秒" },
+    { "id": "bot.aggression", "label": "电脑进攻性", "value": 0.6, "min": 0, "max": 1, "step": 0.05 },
+    { "id": "bomb.fuse", "label": "炸弹引信", "value": 2.4, "min": 1, "max": 4, "step": 0.1, "unit": "秒" },
+    { "id": "flame.time", "label": "火焰持续", "value": 0.55, "min": 0.2, "max": 1.2, "step": 0.05, "unit": "秒" },
+    { "id": "crate.density", "label": "箱子密度", "value": 0.72, "min": 0.2, "max": 0.95, "step": 0.01, "applies": "next" },
+    { "id": "drop.chance", "label": "道具掉落率", "value": 0.4, "min": 0, "max": 1, "step": 0.05 },
+    { "id": "bot.count", "label": "电脑数量", "value": 3, "min": 1, "max": 3, "step": 1, "applies": "next" },
+    { "id": "round.time", "label": "回合时长", "value": 180, "min": 60, "max": 300, "step": 10, "unit": "秒", "applies": "next" }
+  ],
+  "panel": [
+    { "title": "手感", "items": ["player.speed", "speed.bonus", "bomb.fuse", "flame.time"] },
+    { "title": "电脑", "items": ["bot.count", "bot.speed", "bot.aggression"] },
+    { "title": "地图", "items": ["crate.density", "drop.chance", "round.time", { "action": "restart", "label": "重开一局" }] }
+  ]
+}
