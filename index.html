@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- Set lang to the game's language and <title> to its name: the panel's tab shows it. -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>炸弹乱斗</title>
+    <!-- The runtime's rules: keep this block. #loading covers the page until the first frame is
+         drawn with the models the start waits for in place. What is inside it appears only after
+         0.3 s, so a quick load shows just its background. The runtime sets --progress on
+         #loading, from 0 to 1, as the models load. -->
+    <style>html,body{background:#101318;height:100%;margin:0;overflow:hidden}canvas{touch-action:none;width:100%;height:100%;display:block}#ui{pointer-events:none;-webkit-user-select:none;user-select:none;position:fixed;inset:0}#ui .hit{pointer-events:auto}#loading{z-index:1;background:#101318;position:fixed;inset:0}#loading:not(.shown)>*{visibility:hidden!important}</style>
+    <!-- The loading screen's look: replace it, and what is inside #loading, with this game's own. -->
+    <style>#loading{background:#86b4dc url(./art/key-art.jpg) 50%/cover no-repeat;place-items:center;font-family:Arial Rounded MT Bold,PingFang SC,Microsoft YaHei,system-ui,sans-serif;display:grid}#loading .card{text-align:center;background:#fffffff0;border-radius:26px;padding:22px 30px 20px;box-shadow:0 7px #0003}#loading h1{letter-spacing:4px;color:#e8322f;text-shadow:0 4px #b51f1d;margin:0 0 14px;font-size:38px;font-weight:900}#loading .bar{background:repeating-linear-gradient(135deg, #e8322f 0 10px, #ff5a4f 10px 20px) left / calc(var(--progress,0) * 100%) 100% no-repeat #ffe3dd;border-radius:7px;width:200px;height:14px;box-shadow:0 0 0 3px #e8322f}#loading p{color:#5a5f6e;margin:10px 0 0;font-size:13px;font-weight:700}</style>
+    <script type="module" crossorigin src="./assets/index-C9WVvBKw.js"></script>
+  </head>
+  <body>
+    <div id="ui"></div>
+    <div id="loading"><div class="card"><h1>炸弹乱斗</h1><div class="bar"></div><p>正在装填炸弹…</p></div></div>
+    <!-- A three.js game (3D or 2.5D). A pure 2D game loads /core/phaser/runtime.js instead. -->
+  </body>
+</html>
